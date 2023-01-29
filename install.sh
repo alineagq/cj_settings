@@ -1,10 +1,18 @@
-
-
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    install.sh                                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cejrie <cejrie@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/01/29 18:20:37 by cejrie            #+#    #+#              #
+#    Updated: 2023/01/29 18:21:55 by cejrie           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 #!/bin/bash
 
 # SETTINGS
-
 
 black='\033[0;30m'
 red='\033[0;31m'
@@ -152,8 +160,8 @@ echo -e "${green}DONE.${white}"
 
 echo -e "${purple}Installing Power Level 10k.${white}"
 
-cp *.ttf /usr/local/share/fonts
-mkdir -p ~/.local/share/fonts && cp *.ttf ~/.local/share/fonts
+cp fonts/*.ttf /usr/local/share/fonts
+mkdir -p ~/.local/share/fonts && cp fonts/*.ttf ~/.local/share/fonts
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
